@@ -1,0 +1,64 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: Arial;
+}
+.loginform {
+    background: #ffffff;
+    width: 450px;
+    left: 50%;
+    top: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 10px 29px 0px #e0e0e0;
+}
+.loginform h2 {
+    font-size: 30px;
+    margin: 30px 0px;
+    text-transform: uppercase;
+    font-weight: normal;
+    text-align: center;
+}
+.loginform input{
+    width: 100%;
+    margin-bottom: 30px;
+}
+.loginform input[type="text"], input[type="password"]
+{
+    border: none;
+    border-bottom: 1px solid #333;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: #333;
+    font-size: 16px;
+}
+.loginform input[type="submit"] {
+    background: #333;
+    color: #fff;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    transition: 0.4s;
+    border: none;
+	margin-bottom:10px;
+}
+.loginform input[type="submit"]:hover {
+    cursor: pointer;
+    background: #1f5822;
+}
+.loginform a {
+    text-decoration: none;
+    font-size: 15px;
+    line-height: 20px;
+    color: #1e5220;
+}
+.loginform .have-not {
+    float: right;
+}
+.loginform a:hover {
+    color: #4caf50;
+}

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>기본정보</title>
+  <link rel="stylesheet" href="myinfo.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+
+<body>
+  <div id="wrapper">
+    <div id="container" class="bg-white">
+      <div id="header" class="bg-light">
+        <div>
+          <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-black text-decoration-none">
+            <svg class="bi me-2" width="40" height="32">
+              <use xlink:href="#bootstrap"></use>
+            </svg>
+            <span class="fs-4">도서대출서비스</span>
+          </a>
+        </div>
+        <div class="dropdown">
+          <a href="#" class="d-flex align-items-center text-black text-decoration-none dropdown-toggle"
+            id="dropdownUser" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="../../assets/images/blank-profile.png" alt="" width="32" height="32" class="rounded-circle me-2">
+            <strong>member</strong>
+          </a>
+          <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser">
+            <!-- <li><a class="dropdown-item" href="#">Settings</a></li> -->
+            <li><a class="dropdown-item" href="#">내 프로필</a></li>
+            <!-- <li><hr class="dropdown-divider"></li> -->
+            <li><a id="logoutButton" class="dropdown-item" href="#">로그아웃</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div id="sub-container">
+        <div id="sidebar" class="d-flex flex-column flex-shrink-0 text-black bg-white" style="width: 280px;">
+          <ul class="nav nav-pills flex-column mb-auto">
+            <li>
+              <a href="../main/main.html" class="nav-link text-black">
+                <svg class="bi me-2" width="16" height="16">
+                  <use xlink:href="#speedometer2"></use>
+                </svg>
+                도서 검색
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="../basic/basic.html" class="nav-link text-black" aria-current="page">
+                <svg class="bi me-2" width="16" height="16">
+                  <use xlink:href="#home"></use>
+                </svg>
+                기본 정보
+              </a>
+            </li>
+            <li>
+              <a href="../loan/loan.html" class="nav-link text-black">
+                <svg class="bi me-2" width="16" height="16">
+                  <use xlink:href="#speedometer2"></use>
+                </svg>
+                도서대출정보
+              </a>
+            </li>
+            <li>
+              <a href="../reservation/reservation.html" class="nav-link text-black">
+                <svg class="bi me-2" width="16" height="16">
+                  <use xlink:href="#table"></use>
+                </svg>
+                도서예약정보
+              </a>
+            </li>
+            <li>
+              <a href="../board/board.html" class="nav-link text-black">
+                <svg class="bi me-2" width="16" height="16">
+                  <use xlink:href="#grid"></use>
+                </svg>
+                공지사항
+              </a>
+            </li>
+            <li>
+              <a href="../myinfo/myinfo.html" class="nav-link active">
+                <svg class="bi me-2" width="16" height="16">
+                  <use xlink:href="#people-circle"></use>
+                </svg>
+                내 정보
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div id="maincontent">
+          <div id="info">
+            <div id="pageTitle">
+              <h3>내 정보</h3>
+            </div>
+            <div id="resultSection">
+              <div>
+                <table class="table table-bordered">
+                  <tbody>
+                    <tr>
+                      <th>유저명</th>
+                      <td id="userName">사용자 명</td>
+                    </tr>
+                    <tr>
+                      <th>이메일</th>
+                      <td id="userEmail">사용자 이메일</td>
+                    </tr>
+                    <tr>
+                      <th>나이</th>
+                      <td id="userAge">사용자 이메일</td>
+                    </tr>
+
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+    crossorigin="anonymous"></script>
+  <script type="module" src="myinfo.js"></script>
+</body>
+
+</html>

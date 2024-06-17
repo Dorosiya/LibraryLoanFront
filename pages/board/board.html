@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>기본정보</title>
+  <link rel="stylesheet" href="board.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+
+<body>
+  <div id="wrapper">
+    <div id="container" class="bg-white">
+      <div id="header" class="bg-light">
+        <div>
+          <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-black text-decoration-none">
+            <svg class="bi me-2" width="40" height="32">
+              <use xlink:href="#bootstrap"></use>
+            </svg>
+            <span class="fs-4">도서대출서비스</span>
+          </a>
+        </div>
+        <div class="dropdown">
+          <a href="#" class="d-flex align-items-center text-black text-decoration-none dropdown-toggle"
+            id="dropdownUser" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="../../assets/images/blank-profile.png" alt="" width="32" height="32" class="rounded-circle me-2">
+            <strong>member</strong>
+          </a>
+          <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
+            <li><a class="dropdown-item" href="#">내 프로필</a></li>
+            <li><a id="logoutButton" class="dropdown-item" href="#">로그아웃</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div id="sub-container">
+        <div id="sidebar" class="d-flex flex-column flex-shrink-0 text-black bg-white" style="width: 280px;">
+          <ul class="nav nav-pills flex-column mb-auto">
+            <li>
+              <a href="../main/main.html" class="nav-link text-black">
+                <svg class="bi me-2" width="16" height="16">
+                  <use xlink:href="#speedometer2"></use>
+                </svg>
+                도서 검색
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="../basic/basic.html" class="nav-link text-black" aria-current="page">
+                <svg class="bi me-2" width="16" height="16">
+                  <use xlink:href="#home"></use>
+                </svg>
+                기본 정보
+              </a>
+            </li>
+            <li>
+              <a href="../loan/loan.html" class="nav-link text-black">
+                <svg class="bi me-2" width="16" height="16">
+                  <use xlink:href="#speedometer2"></use>
+                </svg>
+                도서대출정보
+              </a>
+            </li>
+            <li>
+              <a href="../reservation/reservation.html" class="nav-link text-black">
+                <svg class="bi me-2" width="16" height="16">
+                  <use xlink:href="#table"></use>
+                </svg>
+                도서예약정보
+              </a>
+            </li>
+            <li>
+              <a href="../board/board.html" class="nav-link active">
+                <svg class="bi me-2" width="16" height="16">
+                  <use xlink:href="#grid"></use>
+                </svg>
+                공지사항
+              </a>
+            </li>
+            <li>
+              <a href="../myinfo/myinfo.html" class="nav-link text-black">
+                <svg class="bi me-2" width="16" height="16">
+                  <use xlink:href="#people-circle"></use>
+                </svg>
+                내 정보
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div id="maincontent">
+          <div id="pageTitle">
+            <h3>공지 사항</h3>
+          </div>
+          <div id="searchsection">
+            <div id="search" class="input-group mb-3 mx-auto w-50">
+              <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                aria-expanded="false" id="dropdownMenuButton">제목</button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <li><a class="dropdown-item" href="#" data-key="title">제목</a></li>
+                <li><a class="dropdown-item" href="#" data-key="username">글쓴이</a></li>
+                <li><a class="dropdown-item" href="#" data-key="content">내용</a></li>
+              </ul>
+              <input type="text" class="form-control" id="inputField" placeholder="검색어 입력">
+            </div>
+            <div id="buttongroup">
+              <button class="btn btn-secondary mx-1" type="submit" id="submitButton">검색</button>
+              <button class="btn btn-secondary mx-1" type="reset" id="resetButton">초기화</button>
+            </div>
+          </div>
+
+
+          <div id="resultSection">
+            <table class="table table-hover table-bordered text-center" id="resultTable">
+              <colgroup>
+                <col style="width: 40%;">
+                <col style="width: 20%;">
+                <col style="width: 30%;">
+                <col style="width: 10%;">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col">제목</th>
+                  <th scope="col">글쓴이</th>
+                  <th scope="col">작성일</th>
+                  <th scope="col">조회수</th>
+                </tr>
+              </thead>
+              <tbody>
+
+              </tbody>
+            </table>
+          </div>
+          <div>
+            <nav>
+              <ul class="pagination justify-content-center">
+                <li class="page-item">
+                  <a class="page-link" href="#" aria-label="Previous">
+                    <span>&laquo;</span>
+                  </a>
+                </li>
+                <li class="page-item">
+                  <a class="page-link" href="#" aria-label="Next">
+                    <span>&raquo;</span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div id="createArticleButton" class="d-flex justify-content-center">
+            <!-- js 추가 -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+    crossorigin="anonymous"></script>
+  <script type="module" src="board.js"></script>
+</body>
+
+</html>
